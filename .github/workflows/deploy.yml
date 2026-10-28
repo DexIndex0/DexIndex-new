@@ -3,7 +3,7 @@ on:
   push:
     branches: [main, master]
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 jobs:
@@ -14,7 +14,21 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - run: npm install && npm run build
+
+      # This creates the lockfile automatically on GitHub's server
+      - name: Generate Lockfile
+        run: npm install --package-lock-only
+
+      # This automatically commits the lockfile back into your repository
+      - name: Commit Lockfile
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: auto-generate package-lock.json"
+          file_pattern: 'package-lock.json'
+
+      - name: Install and Build
+        run: npm ci && npm run build
+        
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
