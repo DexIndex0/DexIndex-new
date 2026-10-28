@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@layer base {
+  * {
+    border-color: rgba(59, 130, 246, 0.15);
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: #070A12;
+    color: #F8FAFC;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+  }
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #070A12;
+}
+::-webkit-scrollbar-thumb {
+  background: #1C39BB;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #0029FF;
+}
+
+/* Tactile Glass & Neon Glow Helpers */
+.glass-panel {
+  background: linear-gradient(135deg, rgba(28, 57, 187, 0.12) 0%, rgba(7, 10, 18, 0.75) 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(59, 130, 246, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(0, 41, 255, 0.12), inset 0 1px 0 0 rgba(255, 255, 255, 0.15);
+}
+
+.glass-panel-hover:hover {
+  border-color: rgba(96, 165, 250, 0.5);
+  box-shadow: 0 12px 40px 0 rgba(0, 41, 255, 0.22), inset 0 1px 0 0 rgba(255, 255, 255, 0.25);
+}
+
+.glass-lens {
+  background: radial-gradient(circle at 35% 35%, rgba(96, 165, 250, 0.8) 0%, rgba(28, 57, 187, 0.85) 45%, rgba(5, 19, 103, 0.95) 100%);
+  box-shadow: 0 0 35px rgba(0, 41, 255, 0.55), inset 0 0 15px rgba(255, 255, 255, 0.4);
+}
+
+.glass-button {
+  background: linear-gradient(180deg, rgba(28, 57, 187, 0.35) 0%, rgba(7, 10, 18, 0.6) 100%);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(96, 165, 250, 0.3);
+  box-shadow: 0 4px 14px rgba(0, 41, 255, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  transition: all 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-button:hover {
+  background: linear-gradient(180deg, rgba(0, 41, 255, 0.45) 0%, rgba(28, 57, 187, 0.4) 100%);
+  border-color: rgba(147, 197, 253, 0.5);
+  box-shadow: 0 6px 20px rgba(0, 41, 255, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+  transform: translateY(-1px);
+}
+
+.glass-button:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 6px rgba(0, 41, 255, 0.2);
+}
+
+.holo-circle {
+  background: radial-gradient(circle at 50% 50%, rgba(0, 41, 255, 0.18) 0%, rgba(7, 10, 18, 0.45) 75%);
+  border: 1.5px dashed rgba(96, 165, 250, 0.4);
+  box-shadow: 0 0 20px rgba(0, 41, 255, 0.15), inset 0 0 15px rgba(28, 57, 187, 0.25);
+}
+
+.holo-circle:hover {
+  border-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 28px rgba(0, 41, 255, 0.4), inset 0 0 20px rgba(96, 165, 250, 0.35);
+}

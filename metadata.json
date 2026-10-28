@@ -1,0 +1,6 @@
+{
+  "name": "DexIndex — Modular Pokédex",
+  "description": "A vibrant, modular landing page for DexIndex: the next-generation Pokédex with tactile glassmorphism, bold typography, and an unwritten encyclopedia awaiting discovery.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
