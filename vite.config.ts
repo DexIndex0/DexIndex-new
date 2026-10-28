@@ -5,6 +5,7 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
+    base: '/DexIndex-new/',
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
